@@ -1,4 +1,4 @@
-cat /etc/exports <<EOF
+cat > /etc/exports <<EOF
 /nfsshare *.contoso.com(rw,no_root_squash)
 EOF
 systemctl start nfs-server
