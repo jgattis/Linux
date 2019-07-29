@@ -16,3 +16,4 @@ firewall-cmd --reload
 nmcli con mod team0 ipv4.dns
 nmcli con down team0
 nmcli con up team0
+cd ~
