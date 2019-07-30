@@ -4,16 +4,13 @@ cd /etc/
 wget https://raw.githubusercontent.com/jgattis/Linux/master/named.conf
 cd ~
 cd /var/named
-nmcli con mod team0 ipv4.dns 10.13.2.5,10.13.2.7
-nmcli con down team0
-nmcli con up team0
 wget https://raw.githubusercontent.com/brianf21/CTS1111C/master/contoso.com.zone
 wget https://raw.githubusercontent.com/brianf21/CTS1111C/master/0.0.10.in-addr.arpa.zone
 systemctl enable named
 systemctl start named
 firewall-cmd --add-service=dns --zone=public --permanent
 firewall-cmd --reload
-nmcli con mod team0 ipv4.dns
+nmcli con mod team0 ipv4.dns 127.0.0.1
 nmcli con down team0
 nmcli con up team0
 cd ~
