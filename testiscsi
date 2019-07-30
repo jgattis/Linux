@@ -1,0 +1,5 @@
+targetcli /iscsi/iqn.2014-06.com.example:remotedisk1/tpg1/acls create iqn.2014-06.com.example:vm2
+targetcli /iscsi/iqn.2014-06.com.example:remotedisk1/tpg1/portals delete 0.0.0.0 3260
+targetcli /iscsi/iqn.2014-06.com.example:remotedisk1/tpg1/portals create 10.0.0.100 3260
+targetcli /iscsi/iqn.2014-06.com.example:remotedisk1/tpg1/luns create /backstores/block/block1
+targetcli saveconfig
