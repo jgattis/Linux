@@ -15,4 +15,5 @@ n
 
 w
 EOF
+partprobe
 yum -y install autofs
