@@ -24,6 +24,6 @@ cd ~
 myuuid=$(blkid | grep sda | awk -F " " '{print $2}')
 echo -e "iscsi\t-fstype=xfs\t$myuuid" >> /etc/auto.misc
 echo -e "nfsshare -fstype=nfs,rw vm1:/nfsshare" >> /etc/auto.misc
-echo -e "smbshare -fstype=cifs,rw,credentials=/root/smb-cred.txt,uid=1000,gid=1000 ://vm1/smbshare"
+echo -e "smbshare -fstype=cifs,rw,credentials=/root/smb-cred.txt,uid=1000,gid=1000 ://vm1/smbshare" >> /etc/auto.misc
 systemctl enable autofs
 systemctl start autofs
