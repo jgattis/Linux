@@ -5,6 +5,7 @@ restorecon -vvFR /smbshare
 setsebool -P samba_export_all_rw=1
 cd /etc/samba
 wget https://raw.githubusercontent.com/jgattis/Linux/master/smb.conf
+cd ~
 useradd -s /sbin/nologin uone
 groupadd faculty
 useradd -G faculty utwo
