@@ -4,4 +4,5 @@ nmcli con add type team-slave ifname eth1 master team0
 nmcli con mod eth0 autoconnect no
 hostnamectl set-hostname vm1.contoso.com
 echo 127.0.0.1 vm1.contoso.com vm1 >> /etc/hosts
+echo 10.0.0.101 vm2.contoso.com vm2 >> /etc/hosts
 reboot
