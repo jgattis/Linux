@@ -1,5 +1,3 @@
-ausearch -c 'unbound' --raw | audit2allow -M my-unbound
-semodule -i my-unbound.pp
 systemctl enable unbound
 cd /etc/unbound/
 rm -y unbound.conf
