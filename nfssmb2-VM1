@@ -10,7 +10,7 @@ useradd -s /sbin/nologin uone
 groupadd faculty
 useradd -G faculty utwo
 echo Pa11word | passwd --stdin uone
-echo Pa11word | passws --stdin utwo
+echo Pa11word | passwd --stdin utwo
 (echo Pa11word; echo Pa11word) | smbpasswd -a uone
 (echo Pa11word; echo Pa11word) | smbpasswd -a utwo
 chown uone:faculty /smbshare
